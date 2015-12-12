@@ -53,7 +53,7 @@ class KeychainItemWrapper {
             self.keychainItemData[kSecAttrAccount] = identifier
             if (accessGroup != nil) {
                 if TARGET_IPHONE_SIMULATOR != 1 {
-                    self.keychainItemData[kSecAttrAccessGroup as String] = accessGroup
+                    self.keychainItemData[kSecAttrAccessGroup] = accessGroup
                 }
             }
         } else {
