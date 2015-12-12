@@ -32,7 +32,7 @@ class KeychainItemWrapper {
     
     init(identifier: String, accessGroup: String?) {
         self.genericPasswordQuery[kSecClass] = kSecClassGenericPassword
-        self.genericPasswordQuery[kSecAttrGeneric] = identifier
+        self.genericPasswordQuery[kSecAttrAccount] = identifier
         
         if (accessGroup != nil) {
             if TARGET_IPHONE_SIMULATOR != 1 {
@@ -50,7 +50,7 @@ class KeychainItemWrapper {
         if copyMatchingResult != noErr {
             self.resetKeychain()
             
-            self.keychainItemData[kSecAttrGeneric as String] = identifier
+            self.keychainItemData[kSecAttrAccount] = identifier
             if (accessGroup != nil) {
                 if TARGET_IPHONE_SIMULATOR != 1 {
                     self.keychainItemData[kSecAttrAccessGroup as String] = accessGroup
