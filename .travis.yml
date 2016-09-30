@@ -1,4 +1,4 @@
 language: objective-c
 xcode_project: KeychainTestApp/KeychainTestApp.xcodeproj
-xcode_scheme: KeychainTestAppTests
+xcode_scheme: KeychainTestApp
 osx_image: xcode8
