@@ -1,4 +1,4 @@
 language: objective-c
-xcode_project: KeychainTestApp/KeychainTestApp.xcodeproj
-xcode_scheme: KeychainTestApp
 osx_image: xcode8
+script:
+  - xcodebuild -project KeychainTestApp/KeychainTestApp.xcodeproj -scheme KeychainTestApp -sdk iphonesimulator build test
