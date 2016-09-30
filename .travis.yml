@@ -1,4 +1,4 @@
 language: objective-c
 osx_image: xcode8
 script:
-  - xcodebuild -project KeychainTestApp/KeychainTestApp.xcodeproj -scheme KeychainTestApp -destination 'platform=iOS Simulator, name=iPhone 7,OS=10.0' build test
+  - xcodebuild -project KeychainTestApp/KeychainTestApp.xcodeproj -scheme KeychainTestApp -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.0' build test
