@@ -4,21 +4,22 @@ A Swift implementation of the KeychainItemWrapper from the [Apple example](https
 # Installation
 
 1. Drag and drop KeychainItemWrapper.swift into your Xcode project.
-2. All done
+2. Enable Keychain Sharing in target capabilities.
+3. All done!
 
 # Usage
 
 ## Setting a Keychain item value
 ```swift
 let keychainItemWrapper = KeychainItemWrapper(identifier: "identifier for this item", accessGroup: "access group if shared")
-keychainItemWrapper["superSecretKey"] = "aSuperSecretValue"
+keychainItemWrapper["superSecretKey"] = "aSuperSecretValue" as AnyObject?
 ```
 
 ## Getting a Keychain item value
 ```swift
 let keychainItemWrapper = KeychainItemWrapper(identifier: "identifier for this item", accessGroup: "access group if shared")
-let superSecretValue = keychainItemWrapper["superSecretKey"] as String?
-println("The super secret value is: \(sharedPassword)")
+let superSecretValue = keychainItemWrapper["superSecretKey"] as? String?
+print("The super secret value is: \(superSecretValue)")
 ```
 
 # Contact
